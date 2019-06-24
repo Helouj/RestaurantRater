@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<RestaurantRaterMVC.Models.Restaurant>
-   
-@{ 
- ViewBag.Title = "Restaurants";
-    
+
+@{
+    ViewBag.Title = "Restaurants";
+
 }
 
 <h2>Restaurants</h2>
@@ -27,7 +27,7 @@
         <th></th>
         <td></td>
     </tr>
-    @foreach( var restaurant in Model)
+    @foreach (var restaurant in Model)
     {
         <tr>
             <td>
@@ -41,9 +41,9 @@
                 @Html.DisplayFor(item => restaurant.FoodType)
             </td>
             <td>
-                @Html.ActionLink("Edit button", "Edit", new { id = restaurant.RestaurantID}) |
-                @Html.ActionLink("More Info", "Details", new { id = restaurant.RestaurantID})|
-                @Html.ActionLink("Destroy", "Delete", new { id = restaurant.RestaurantID})
+                @Html.ActionLink("Edit button", "Edit", new { id = restaurant.RestaurantID }) |
+                @Html.ActionLink("More Info", "Details", new { id = restaurant.RestaurantID })|
+                @Html.ActionLink("Destroy", "Delete", new { id = restaurant.RestaurantID })
             </td>
         </tr>
     }

@@ -1,15 +1,17 @@
 ﻿@model RestaurantRaterMVC.Models.Restaurant
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 
-<h2>Rate a new Restaurant</h2>
+<h2>Edit</h2>
 
 @using (Html.BeginForm())
 {
 
-    @Html.AntiForgeryToken();
+    @Html.AntiForgeryToken()
+
+
 
     <div class="form-horizontal">
 
@@ -20,7 +22,7 @@
         <hr />
 
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
+        @Html.HiddenFor(model => model.RestaurantID)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
@@ -60,11 +62,10 @@
         <div class="form-group">
 
             <div class=" col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" value="Create" />
+                <input type="submit" class="btn btn-default" value="Update" />
 
             </div>
         </div>
 
     </div>
-
 }
