@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace RestaurantRaterMVC.Models
         public int RestaurantID { get; set; }
         public string Name { get; set; }
         public double Rating { get; set; }
-
+        [Display(Name = "Food Type")]
         public string FoodType { get; set; }
     }
 
